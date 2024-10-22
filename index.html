@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="container">
+    <!-- 使用 HTML img 標籤 -->
+        <h2>使用 HTML img 標籤</h2>
+        <p>容器一樣寬高，照片設定寬 500px </p>
+        <div class="section">
+            <ul>
+                <li>長圖片</li>
+            </ul>
+            <div class="img-container">
+                <img src="./image/長圖片.jpg" alt="">
+            </div>
+        </div>
+        <div class="section">
+            <ul>
+                <li>寬圖片</li>
+            </ul>
+            <div class="img-container">
+                <img src="./image/寬圖片.jpg" alt="">
+            </div>
+        </div>
+
+        <hr>
+
+     <!-- 展示 background 屬性 -->
+        <h2>展示 background 屬性_只有寬高沒有其他設定</h2>
+        <p>圖片來源寫在 HTML 結構中、套用相同寬度 CSS 樣式，放入不同寬度的照片</p>
+        <div class="section">
+            <ul>
+                <li>圖片原始大小 ＜ div 寬度</li>
+            </ul>
+            <div class="bg-image01" style="background-image: url(./image/寬度300px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>圖片原始大小 ＞ div 寬度</li>
+            </ul>
+            <div class="bg-image01" style="background-image: url(./image/寬圖片.jpg);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>圖片原始大小 ＝ div 寬度</li>
+            </ul>
+            <div class="bg-image01" style="background-image: url(./image/寬度400px.png);"></div>  
+        </div>
+
+        <hr>
+
+        <h2>展示 background 屬性_background-size</h2>
+        <p>不同尺寸放在不同樣式呈現，小於範圍就會複製至撐滿，而不同尺寸影響的是解析度</p>
+        <!-- 100px -->
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片100px 樣式covrer 
+                    <br>覆蓋，因為圖片是長的，保證寬度撐滿，捨去高度
+                </li>
+            </ul>
+            <div class="bg-image-cover" style="background-image: url(./image/寬度100px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片100px 樣式contain
+                    <br>容納，保證完整呈現圖片，空白處重複撐滿
+                </li>
+            </ul>
+            <div class="bg-image-contain" style="background-image: url(./image/寬度100px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片100px 樣式定值100px
+                    <br>保持比例完整呈現，空白處重複撐滿
+                </li>
+            </ul>
+            <div class="bg-image-Fixed" style="background-image: url(./image/寬度100px.png);"></div>  
+        </div>
+        <!-- 800px -->
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片800px 樣式covrer</li>
+            </ul>
+            <div class="bg-image-cover" style="background-image: url(./image/寬度800px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片800px 樣式contain</li>
+            </ul>
+            <div class="bg-image-contain" style="background-image: url(./image/寬度800px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片800px 樣式定值100px</li>
+            </ul>
+            <div class="bg-image-Fixed" style="background-image: url(./image/寬度800px.png);"></div>  
+        </div>
+        
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片736px 樣式covrer
+                    <br>覆蓋，因為圖片是寬的，保證高度撐滿，但捨棄寬度
+                </li>
+            </ul>
+            <div class="bg-image-cover" style="background-image: url(./image/寬圖片.jpg);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片736px 樣式contain
+                    <br>容納，保證完整呈現圖片，空白處重複撐滿
+                </li>
+            </ul>
+            <div class="bg-image-contain" style="background-image: url(./image/寬圖片.jpg);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>容器寬度400px 照片736px 樣式定值100px
+                    <br>保持比例完整呈現，空白處重複撐滿
+                </li>
+            </ul>
+            <div class="bg-image-Fixed" style="background-image: url(./image/寬圖片.jpg);"></div>  
+        </div>
+
+        <hr>
+
+        <h2>展示 background 屬性_background-repeat</h2>
+        <p>圖片比較小時重複方式</p>
+        <div class="section">
+            <ul>
+                <li>X 軸重複</li>
+            </ul>
+            <div class="bg-image-repeat-x" style="background-image: url(./image/寬度800px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>Y 軸重複</li>
+            </ul>
+            <div class="bg-image-repeat-y" style="background-image: url(./image/寬度800px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>不重複</li>
+            </ul>
+            <div class="bg-image-no-repeat" style="background-image: url(./image/寬度800px.png);"></div>  
+        </div>
+
+        <hr>
+
+        <h2>展示 background 屬性_background-position</h2>
+        <p>圖片比較小時重複方式</p>
+        <div class="section">
+            <ul>
+                <li>X方向 90%</li>
+            </ul>
+            <div class="bg-image-x" style="background-image: url(./image/寬圖片.jpg);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>Y方向 90%</li>
+            </ul>
+            <div class="bg-image-y" style="background-image: url(./image/寬度800px.png);"></div>  
+        </div>
+        <div class="section">
+            <ul>
+                <li>中心</li>
+            </ul>
+            <div class="bg-image-center" style="background-image: url(./image/寬圖片.jpg);"></div>  
+        </div>
+        <hr>
+    <!-- logo 製作 -->
+        <h2>logo 使用</h2>
+        <p>要在 logo 底下藏文字，有助於 sec，以下有兩種方式</p>
+
+        <a href="#!" class="logo01">
+            <h1>公司名稱</h1>
+        </a>
+
+        <a href="#!" class="logo02">
+            <img src="./image/logo.svg" alt="公司名稱">
+        </a>
+
+        <hr>
+
+    <!-- 固定比例圖框 --> 
+    <h2>等比例縮放圖片</h2>
+    <p>background 系列設定的值都是 size: cover；position: 0 90% </p>
+    <div class="section">
+        <ul>
+         <li>2:3</li>
+         </ul> 
+         <div class="outter">
+             <div class="fm-image-containe ratio2-3">
+                 <div class="image" style="background-image: url(./image/長圖片.jpg);">
+                 </div>
+             </div>
+          </div>
+     </div>
+    <div class="section">
+       <ul>
+        <li>1:1</li>
+        </ul> 
+        <div class="outter">
+            <div class="fm-image-containe ratio1-1">
+                <div class="image" style="background-image: url(./image/長圖片.jpg);">
+                </div>
+            </div>
+         </div>
+    </div>
+     <div class="section">
+        <ul>
+         <li>4:3</li>
+         </ul> 
+         <div class="outter">
+             <div class="fm-image-containe ratio4-3">
+                 <div class="image" style="background-image: url(./image/長圖片.jpg);">
+                 </div>
+             </div>
+          </div>
+     </div>
+     <div class="section">
+        <ul>
+         <li>16:9</li>
+         </ul> 
+         <div class="outter">
+             <div class="fm-image-containe ratio16-9">
+                 <div class="image" style="background-image: url(./image/長圖片.jpg);">
+                 </div>
+             </div>
+          </div>
+     </div>
+    
+     
+    
+        <footer class="footer"></footer>
+    </div>
+    
+    
+
+
+    
+</body>
+</html>
